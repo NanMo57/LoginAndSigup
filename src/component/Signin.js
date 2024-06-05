@@ -55,10 +55,12 @@ function Signin() {
         if(res){
             setCorrect(true)
             setLogin(true)
+            console.log('done')
             usenavigation('/LoginAndSigup/Home')
         }else{
           setErrorSend('The account is not registered')
           setCorrect(false)
+            console.log('not done')
           viewMess()
         }
       })
