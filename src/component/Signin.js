@@ -51,7 +51,7 @@ function Signin() {
         "Pass":pass,
       }
 
-      axios.get('http://localhost:3003/Users').then(req=>req.data.some(ele=>ele.Email === userData.Email && ele.Pass === userData.Pass)).then(res=>{ 
+      axios.get('https://my-json-server.typicode.com/NanMo57/DataJSON/Users').then(req=>req.data.some(ele=>ele.Email === userData.Email && ele.Pass === userData.Pass)).then(res=>{ 
         if(res){
             setCorrect(true)
             setLogin(true)

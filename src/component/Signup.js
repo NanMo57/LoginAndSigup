@@ -88,7 +88,7 @@ function Signup() {
         "Country":country
       }
       function sendData(){
-         axios.post('http://localhost:3003/Users',userData)
+         axios.post('https://my-json-server.typicode.com/NanMo57/DataJSON/Users',userData)
         .then(req=>{
           if(req.statusText === "Created"){
             setErrorSend('The account has been created')
@@ -96,7 +96,7 @@ function Signup() {
           }
         })
       }
-      axios.get('http://localhost:3003/Users').then(req=>req.data.some(ele=>ele.Email === userData.Email)).then(res=>{ 
+      axios.get('https://my-json-server.typicode.com/NanMo57/DataJSON/Users').then(req=>req.data.some(ele=>ele.Email === userData.Email)).then(res=>{ 
         if(res){
           setErrorSend('This email is present before')
             setCorrect(false)
@@ -106,6 +106,7 @@ function Signup() {
         }
         viewMess('/LoginAndSigup')
       })
+
     }
   };
 
